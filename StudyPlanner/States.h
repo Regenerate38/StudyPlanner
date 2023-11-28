@@ -4,6 +4,7 @@
 #include "Calendar.h"
 #include "resource.h"
 #include <wx/mstream.h>
+#include "Revision.h"
 #include "Internships.h"
 class States
 {
@@ -18,4 +19,5 @@ class States
 	static int selectedPage;
 	static std::string companyretrieveurl;
 	static std::string jobName;
+	static Revision* revision;
 };

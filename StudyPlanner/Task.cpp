@@ -68,3 +68,5 @@ std::vector<int> pendingtaskCount(const std::string fileName)
 	count.push_back(p);
 	return count;
 }
+
+//OnAddButtonClicked()

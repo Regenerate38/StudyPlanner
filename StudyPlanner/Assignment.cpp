@@ -184,7 +184,10 @@ void Assignment::AddItemFromInput(int p, wxString Input, wxString Time)
 	item = date + wxString(30 - date.Length(), ' ') + item;
 	if (!item.IsEmpty() && !time.IsEmpty() && time.Length() <= 10 && dt3.ParseISODate(time))
 	{
+		int index = CheckListBox[p]->GetCount();
 		CheckListBox[p]->Insert(item, CheckListBox[p]->GetCount());
+		CheckListBox[p]->GetItem(index)->SetTextColour(wxColor(255, 255, 255));
+
 	}
 }
 
@@ -214,6 +217,7 @@ void Assignment::CallInputFields(int f)
 	{
 		AddItemFromInput(f, Input, InputTime);
 	}
+	Input = "";
 }
 
 void Assignment::RemoveInputFields()
